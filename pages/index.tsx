@@ -340,6 +340,7 @@ export default function Home() {
                 method="POST"
                 data-netlify="true"
               >
+                <input type="hidden" name="form-name" value="contact"/>
                 <div className="  flex flex-col dark:bg-gray-800 p-8 ">
                   <label className="font-poppins font-bold">
                     Nombre
