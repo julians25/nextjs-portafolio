@@ -357,7 +357,6 @@ export default function Home() {
                     className="shadow-sm shadow-black bg-slate-100 mb-2"
                   />
                   <label form="correo" className="font-poppins font-bold">
-                    {" "}
                     Mensaje
                   </label>
 
