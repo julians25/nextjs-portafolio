@@ -290,9 +290,9 @@ export default function Home() {
                   className="hover:-translate-y-1  cursor-pointer"
                   title="React js"
                 />
-                <SiTailwindcss
+                <TbBrandCss3
                   className="hover:-translate-y-1  cursor-pointer"
-                  title="Tailwindcss"
+                  title="Css3"
                 />
                 <SiJavascript
                   className="hover:-translate-y-1  cursor-pointer"
@@ -334,7 +334,8 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <form name="contact" method="POST" data-netlify="true">
+
+              <form name="contact"  data-netlify="true">
                 <div className="  flex flex-col dark:bg-gray-800 p-8 ">
                   <label form="bombre" className="font-poppins font-bold">
                     Nombre
@@ -378,6 +379,7 @@ export default function Home() {
                   </div>
                 </div>
               </form>
+
             </div>
           </div>
         </section>
