@@ -335,36 +335,36 @@ export default function Home() {
                 </div>
               </div>
 
-              <form name="contact"  data-netlify="true">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+              >
                 <div className="  flex flex-col dark:bg-gray-800 p-8 ">
-                  <label form="bombre" className="font-poppins font-bold">
+                  <label className="font-poppins font-bold">
                     Nombre
                   </label>
                   <input
                     required
                     type="text"
                     name="nombre"
-                    id="nombre"
                     className="shadow-sm shadow-black bg-slate-100 mb-2"
                   />
-                  <label form="correo" className="font-poppins font-bold">
+                  <label  className="font-poppins font-bold">
                     Email
                   </label>
                   <input
                     required
                     type="email"
                     name="correo"
-                    id="correo"
                     className="shadow-sm shadow-black bg-slate-100 mb-2"
                   />
-                  <label form="correo" className="font-poppins font-bold">
+                  <label  className="font-poppins font-bold">
                     Mensaje
                   </label>
-
                   <textarea
                     required
                     name="mensaje"
-                    id="mensaje"
                     cols={30}
                     rows={10}
                     className="shadow-sm shadow-black bg-slate-100"
@@ -379,7 +379,6 @@ export default function Home() {
                   </div>
                 </div>
               </form>
-
             </div>
           </div>
         </section>
