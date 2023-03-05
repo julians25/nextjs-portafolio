@@ -334,7 +334,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <form name="contacto" >
+              <form name="contacto"  netlify>
                 <div className="  flex flex-col dark:bg-gray-800 p-8 ">
                   <label form="bombre" className="font-poppins font-bold">
                     Nombre
