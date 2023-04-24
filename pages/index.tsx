@@ -1,12 +1,12 @@
 import Head from "next/head";
 import { useState } from "react";
 import Image from "next/image";
-import dev from "../public/dev.png";
 import Appnswer from "../public/Appnswer.png";
 import devMovil from "../public/devMovil.png";
 import devData from "../public/devData.png";
 import devWeb from "../public/devWeb.png";
-import f from "../public/img2.svg";
+import imaDown from "../public/img2.svg";
+import imaDarck from "../public/img1.png";
 import gamesData from "../public/GamesData.png";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { GrReactjs } from "react-icons/gr";
@@ -111,7 +111,7 @@ export default function Home() {
         </nav>
       </header>
       <main className="bg-white dark:bg-gray-900 ">
-        <section className=" pt-32 bg-gray-200 dark:bg-gray-900 " id="resumen">
+        <section className=" pt-32 bg-gray-200 dark:bg-gray-800  " id="resumen">
           <div className="text-center p-10">
             <h2 className="text-5xl py-2 text-teal-900 font-medium dark:text-teal-400 md:text-6xl">
               Julian Salas
@@ -144,7 +144,7 @@ export default function Home() {
             </a>
           </div>
           <div className="w-full -bottom-40 bg-gray-200">
-            <Image alt="" src={darkMode ? "" : f} />
+          <Image alt="" src={darkMode ? imaDarck  : imaDown} />
           </div>
         </section>
 
