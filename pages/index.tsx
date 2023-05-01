@@ -1,13 +1,14 @@
 import Head from "next/head";
 import { useState } from "react";
 import Image from "next/image";
-import Appnswer from "../public/Appnswer.png";
+import { GridPortfolio } from "../components/GridPortfolio";
 import devMovil from "../public/devMovil.png";
 import devData from "../public/devData.png";
 import devWeb from "../public/devWeb.png";
 import imaDown from "../public/img2.svg";
 import imaDarck from "../public/img1.png";
-import gamesData from "../public/GamesData.png";
+import udemy from "../public/udemy.svg";
+import certificate from "../public/certificate.svg";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { GrReactjs } from "react-icons/gr";
 import { TbBrandCss3, TbBrandKotlin, TbBrandReactNative } from "react-icons/tb";
@@ -16,7 +17,6 @@ import {
   SiFirebase,
   SiPostgresql,
   SiMysql,
-  SiTailwindcss,
 } from "react-icons/si";
 import { DiSqllite } from "react-icons/di";
 import {
@@ -57,7 +57,7 @@ export default function Home() {
         />
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
-      <header className="fixed  top-0  left-0 right-0 bg-gray-200  dark:bg-gray-800 ">
+      <header className="fixed  top-0  left-0 right-0 bg-gray-200  dark:bg-gray-800 z-10">
         <nav className=" px-10 flex justify-between flex-wrap  ">
           <div className="flex mb-5 gap-3 items-center">
             <Lottie
@@ -144,12 +144,13 @@ export default function Home() {
             </a>
           </div>
           <div className="w-full -bottom-40 bg-gray-200">
-          <Image alt="" src={darkMode ? imaDarck  : imaDown} />
+            <Image alt="" src={darkMode ? imaDarck : imaDown} />
           </div>
         </section>
 
         <section className="py-10 md:px-20 lg:px-40" id="habilidades">
-          <h3 className="text-3xl my-8 dark:text-white">Habilidades</h3>
+
+          <h3 className="text-3xl my-8 dark:text-white font-burtons text-center">Habilidades</h3>
           <div className="lg:flex gap-10">
             <div className="text-center shadow-lg h-96 rounded-xl  bg-gray-100 dark:bg-gray-800 flex-1">
               <div className=" mx-auto bg-gradient-to-b from-gray-200 dark:bg-gradient-to-b dark:from-gray-900   w-40 h-40 mt-10">
@@ -236,7 +237,7 @@ export default function Home() {
         </section>
         <section className="py-10 md:px-20 lg:px-40" id="portafolio">
           <div>
-            <h3 className="text-3xl py-1 dark:text-white ">Portafolio</h3>
+            <h3 className="text-3xl py-1 dark:text-white font-burtons text-center">Portafolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Durante mi carrera profesional, he tenido la oportunidad de
               trabajar en diversos proyectos de software, desde el diseño y
@@ -246,62 +247,27 @@ export default function Home() {
               desarrollo.
             </p>
           </div>
-          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap text-center">
-            <div className="basis-1/3 flex-1 ">
-              <a href="https://appnswer-ba06b.firebaseapp.com/" target="_blank">
-                <Image
-                  className="rounded-lg object-cover"
-                  alt=""
-                  src={Appnswer}
-                />
-              </a>
-              <h1 className="text-2xl py-1 dark:text-white font-burtons">
-                Appnswer
-              </h1>
-              <div className="text-4xl flex justify-center gap-10  text-slate-700 dark:text-gray-400">
-                <SiFirebase
-                  className="hover:-translate-y-1  cursor-pointer"
-                  title="FireBase"
-                />
-                <TbBrandReactNative
-                  className="hover:-translate-y-1  cursor-pointer"
-                  title="React Native"
-                />
-                <TbBrandCss3
-                  className="hover:-translate-y-1  cursor-pointer"
-                  title="Css3"
-                />
-              </div>
-            </div>
+          <GridPortfolio />
+        </section>
 
-            <div className="basis-1/3 flex-1">
-              <a href="https://gamesdata-3eb60.web.app/" target="_blank">
-                <Image
-                  className="rounded-lg object-cover cursor-pointer"
-                  alt=""
-                  src={gamesData}
-                />
-              </a>
-              <h1 className="text-2xl py-1 dark:text-white font-burtons">
-                GamesData
-              </h1>
-              <div className="text-4xl flex justify-center gap-10  text-slate-700 dark:text-gray-400">
-                <GrReactjs
-                  className="hover:-translate-y-1  cursor-pointer"
-                  title="React js"
-                />
-                <TbBrandCss3
-                  className="hover:-translate-y-1  cursor-pointer"
-                  title="Css3"
-                />
-                <SiJavascript
-                  className="hover:-translate-y-1  cursor-pointer"
-                  title="Javacript"
-                />
-              </div>
+        <section className="py-10 md:px-20 lg:px-40">
+          <h3 className="text-3xl py-4 dark:text-white font-burtons text-center">Certificados</h3>
+          <div className="flex justify-center">
+            <div className=" aspect-auto w-96 relative flex overflow-x-scroll snap-mandatory snap-x -z-0">
+              <Image
+                className="rounded-lg  cursor-pointer w-full left-0 sticky  object-cover snap-center"
+                alt=""
+                src={certificate}
+              />
+              <Image
+                className="rounded-lg  cursor-pointer w-full left-0 sticky  object-cover snap-center"
+                alt=""
+                src={udemy}
+              />
             </div>
           </div>
         </section>
+
         <section className="py-10 md:px-20 lg:px-96" id="contacto">
           <div className=" bg-gray-200  dark:bg-gray-800 ">
             <div className="text-center align-middle ">
@@ -335,34 +301,24 @@ export default function Home() {
                 </div>
               </div>
 
-              <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-              >
-                <input type="hidden" name="form-name" value="contact"/>
+              <form name="contact" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
                 <div className="  flex flex-col dark:bg-gray-800 p-8 ">
-                  <label className="font-poppins font-bold">
-                    Nombre
-                  </label>
+                  <label className="font-poppins font-bold">Nombre</label>
                   <input
                     required
                     type="text"
                     name="nombre"
                     className="shadow-sm shadow-black bg-slate-100 mb-2"
                   />
-                  <label  className="font-poppins font-bold">
-                    Email
-                  </label>
+                  <label className="font-poppins font-bold">Email</label>
                   <input
                     required
                     type="email"
                     name="correo"
                     className="shadow-sm shadow-black bg-slate-100 mb-2"
                   />
-                  <label  className="font-poppins font-bold">
-                    Mensaje
-                  </label>
+                  <label className="font-poppins font-bold">Mensaje</label>
                   <textarea
                     required
                     name="mensaje"
@@ -383,6 +339,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
       </main>
     </div>
   );
